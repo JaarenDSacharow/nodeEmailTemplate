@@ -1,0 +1,64 @@
+head 
+  link(rel="stylesheet", href="test.css", data-inline)
+
+body
+  p Here is your custom report
+    div(class=['sixteen', 'wide', 'column'])
+        table(class= [ 'ui', 'purple', 'compact', 'table'])
+        thead
+            tr
+            th&attributes({'colspan': '7'}) Electric
+            tr(class=['right', 'aligned'])
+            th
+            th Average
+                div(class=['ui', 'sub', 'header']) past 30 days
+            th Prior
+            th Prior
+                div(class=['ui', 'sub', 'header']) vs Average
+            th Yesterday
+            th Yesterday
+                div(class=['ui', 'sub', 'header']) vs Average
+
+            th Trending
+                div(class=['ui', 'sub', 'header']) Chart
+        tbody
+            tr(class=['right', 'aligned'])
+            td(class=['left', 'aligned']) Cooling Degree Days
+            td 15.28° F
+            td 6.18° F
+            td
+                div(class=['ui', 'red', 'medium', 'label']) 0.91° F
+            td 14.25° F
+            td
+                div(class=['ui', 'grey', 'medium', 'label']) -1.02° F
+            td
+                button(class=['ui', 'grey', 'mini', 'icon', 'button'])
+                i(class=['line', 'chart', 'icon'])&attributes({'aria-hidden': 'true'})
+        tbody
+            tr(class=['right', 'aligned'])
+            td(class=['left', 'aligned']) Heating Degree Days
+            td 0.00° F
+            td 0.00° F
+            td
+                div(class=['ui', 'grey', 'medium']) 0.00° F
+            td 0.00° F
+            td
+                div(class=['ui', 'grey', 'medium']) 0.00° F
+            td
+                button(class=['ui', 'grey', 'mini', 'icon', 'button'])
+                i(class=['line', 'chart', 'icon'])&attributes({'aria-hidden': 'true'})
+        tbody
+            tr(class=['right', 'aligned'])
+            td(class=['left', 'aligned']) Whole Day
+                i(class=['caret', 'right', 'link', 'icon'])&attributes({'aria-hidden': 'true'})
+            td 2445.59 Kwh
+            td 2710.36 Kwh
+            td
+                div(class=['ui', 'red', 'medium', 'label']) 264.78 Kwh
+            td 2731.25 Kwh
+            td
+                div(class=['ui', 'red', 'medium', 'label']) 285.66 Kwh
+            td 
+                button(class=['ui', 'grey', 'mini', 'icon', 'button'])
+                i(class=['line', 'chart', 'icon'])&attributes({'aria-hidden': 'true'})
+    

@@ -1,0 +1,30 @@
+{
+  "name": "emailtemplatetest",
+  "version": "1.0.0",
+  "description": "a service for templating and sending email reports for protal3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon src/index.js --exec babel-node",
+    "build": "npm run clean && babel src -d dist &&  cp -r src/templates/test/* dist/templates/test",
+    "start-prod": "node dist/index.js",
+    "clean": "rimraf dist/templates/test/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.12.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "bluebird": "^3.5.0",
+    "email-templates": "^3.1.5",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "nodemailer": "^4.2.0"
+  }
+}
